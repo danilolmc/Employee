@@ -46,6 +46,8 @@ body > header {
 body > header > aside {
   display: flex;
   column-gap: 70px;
+  row-gap: 40px;
+  flex-wrap:wrap;
 }
 
 body > header > aside span {
@@ -63,6 +65,7 @@ body > header > aside .search-box {
   align-items: center;
   padding: 0 25px;
   max-height: 50px;
+  height: 50px;
   min-width: 300px;
   border-radius: 40px;
   background: rgb(243, 243, 243);
@@ -115,6 +118,7 @@ main > header aside:first-of-type span:first-of-type {
   background: var(--primary-color);
   box-shadow: 0 5px 10px var(--primary-color);
   border-radius: 2px;
+  max-height: 50px;
 }
 
 main > header aside:first-of-type span:first-of-type i {
@@ -204,4 +208,29 @@ main > header aside.buttons button {
   row-gap: 60px;
   column-gap: 40px;
   margin-top: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:838px){
+
+  body > header{
+    padding: 0;
+  }
+  
+  body > header > aside{
+    padding: 29px;
+    justify-content: center;
+  }
+  .content{
+    justify-content: center;
+  }
 }
