@@ -1,6 +1,5 @@
 function PersonCard(animation) {
-
-    let favorited = false;
+  let favorited = false;
 
   let divContainer = document.createElement("div");
 
@@ -12,17 +11,15 @@ function PersonCard(animation) {
   let innerDivHeader = document.createElement("header");
 
   innerDivHeader.id = "headerCardMember";
-  
+
   let favoriteIconContainer = document.createElement("span");
 
   favoriteIconContainer.id = "heartIconContainer";
-  
+
   let favoriteIcon = document.createElement("i");
 
   favoriteIcon.addEventListener("click", (e) => {
-
     e.target.classList.toggle("favorited");
-    
   });
 
   favoriteIcon.className = "fas fa-heart";
@@ -33,13 +30,13 @@ function PersonCard(animation) {
 
   let figureAvatarContainer = document.createElement("figure");
 
-  figureAvatarContainer.className = "figure"
+  figureAvatarContainer.className = "figure";
 
   let AvatarImg = document.createElement("img");
 
   AvatarImg.setAttribute(
     "src",
-    "https://media-exp1.licdn.com/dms/image/C4D03AQF0SGekpcvHyA/profile-displayphoto-shrink_100_100/0/1574798726856?e=1612396800&v=beta&t=sYLckfHr2HGDQx9Uagw2HDx-u7dreBjPFHNhuvJX7s4"
+    "https://avatars0.githubusercontent.com/u/31545128?s=120&v=4"
   );
 
   AvatarImg.classList = "memberImage";
@@ -65,30 +62,30 @@ function PersonCard(animation) {
   let buttonsContainer = document.createElement("footer");
 
   let buttonAssign = document.createElement("button");
-  
+
   let buttonAssignIcon = document.createElement("span");
-  
+
   buttonAssignIcon.className = "fas fa-book";
 
   let buttonAssignText = document.createElement("label");
 
   buttonAssignText.textContent = "Assign";
 
-  buttonAssign.append(buttonAssignIcon,buttonAssignText);
-  
+  buttonAssign.append(buttonAssignIcon, buttonAssignText);
+
   let buttonSee = document.createElement("button");
-  
+
   let buttonSeeIcon = document.createElement("span");
-  
+
   buttonSeeIcon.className = "fas fa-eye";
-  
+
   let buttonSeeText = document.createElement("label");
-  
+
   buttonSeeText.textContent = "View";
-  
-  buttonSee.append(buttonSeeIcon,buttonSeeText);
-  
-  buttonsContainer.append(buttonAssign,buttonSee);
+
+  buttonSee.append(buttonSeeIcon, buttonSeeText);
+
+  buttonsContainer.append(buttonAssign, buttonSee);
 
   figureAvatarContainer.append(AvatarNameEmail, buttonsContainer);
 
