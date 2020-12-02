@@ -1,0 +1,107 @@
+.divContainerAdd {
+  width: 100%;
+  min-height: 400px;
+  height: 350px;
+  background: var(--white-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.01), 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: all .8s ease;
+  border: 0.5px solid transparent;
+}
+
+.divContainerAdd:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05), 0 0px 30px rgba(0, 0, 0, 0.07);
+}
+
+@keyframes animaCard {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.divContainerAdd > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.divContainerAdd > div > figure {
+  display: flex;
+  max-width: 80%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.divContainerAdd > div > figure > label {
+  padding: 36px 40px;
+  border-radius: 50%;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 5px;
+  color: #ccc;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.divContainerAdd > div > figure > label:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.divContainerAdd > div > header > span {
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+figure img.addMemberImg {
+  max-width: 30px;
+}
+
+figure img.memberImage {
+  border-radius: 50%;
+  min-width: 120px;
+}
+
+.divContainerAdd > div > figure > figcaption {
+  text-align: center;
+}
+
+.divContainerAdd > div > figure > figcaption > * {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.divContainerAdd > div > figure > figcaption > input:first-child {
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.divContainerAdd > div > figure > figcaption > input:last-child {
+  color: #aaa;
+}
+
+.divContainerAdd > div button {
+  background: var(--primary-color);
+  width: 50%;
+  padding: 12px;
+  border-radius: 30px;
+  color: var(--white-color);
+  transition: 0.5s ease;
+}
+
+.divContainerAdd > div button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px -5px var(--primary-color);
+}

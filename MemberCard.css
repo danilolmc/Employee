@@ -1,0 +1,79 @@
+
+#headerCardMember{
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#headerCardMember #heartIconContainer i{
+    color: #fff;
+    font-size: 19px;
+    stroke-width: 2px;
+    text-shadow:  0 0 1px #777,
+                  0 0 1px #777,
+                  0 0 1px #777,
+                  0 0 1px #777;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#headerCardMember #heartIconContainer i:hover{
+    text-shadow:  0 0 1px var(--heart-color),
+                  0 0 1px var(--heart-color),
+                  0 0 1px var(--heart-color),
+                  0 0 1px var(--heart-color);
+    color: var(--heart-color);
+}
+
+.favorited{
+    color: var(--heart-color) !important;
+    text-shadow:  0 2px 10px var(--heart-color),
+                  0 0px 0px var(--heart-color),
+                  0 0px 0px var(--heart-color),
+                  0 0px 0px var(--heart-color)  !important;
+    transform: scale(1.1) !important;
+}
+
+#divContainerMember > div{
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+}
+
+figure footer{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+figure footer button{
+    display: flex;
+    column-gap: 10px;
+    max-width: 110px;
+    padding: 0 5px;
+    font-size: 16px !important;
+    justify-content: center;
+    align-items: center;
+    color: #ccc !important;
+    background: none !important;
+}
+
+figure footer button *{
+    cursor: pointer;
+}
+
+figure footer button:hover{
+
+    transform: scale(1.05);
+    color: var(--white-color) !important;
+    background: var(--primary-color) !important;
+    box-shadow: 0 10px 30px -5px var(--primary-color);
+   
+}
+
+.figure{
+    row-gap: 25px !important;
+}

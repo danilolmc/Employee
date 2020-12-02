@@ -1,0 +1,207 @@
+:root {
+  --bg-color: #f5f7fa;
+  --primary-color: #507bfc;
+  --white-color: #ffffff;
+  --medium-gray-color: #80888f;
+  --heart-color: #fa5f7d;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #bbb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+body > header {
+  background: var(--white-color);
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
+  padding: 20px 95px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body > header > aside {
+  display: flex;
+  column-gap: 70px;
+}
+
+body > header > aside span {
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+body > header > aside span label {
+  color: #eee;
+}
+
+body > header > aside .search-box {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  max-height: 50px;
+  min-width: 300px;
+  border-radius: 40px;
+  background: rgb(243, 243, 243);
+}
+
+.search-box input {
+  width: 100%;
+  color: #bbb;
+  background: none;
+  height: 100%;
+}
+
+.search-box input::placeholder {
+  color: #ddd;
+}
+
+main {
+  padding: 90px;
+}
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 90px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+main > header aside:first-of-type {
+  display: flex;
+  column-gap: 20px;
+  width: 70%;
+  transform: translateX(100px);
+  animation: asideOneEffect 1s ease forwards;
+  animation-delay: .3s;
+  opacity: 0;
+}
+
+@keyframes asideOneEffect {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+main > header aside:first-of-type span:first-of-type {
+  display: grid;
+  place-content: center;
+  padding: 13px 14px;
+  background: var(--primary-color);
+  box-shadow: 0 5px 10px var(--primary-color);
+  border-radius: 2px;
+}
+
+main > header aside:first-of-type span:first-of-type i {
+  color: var(--white-color);
+  font-size: 20px;
+}
+
+main > header aside:first-of-type span:last-of-type {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+main > header aside:first-of-type span:last-of-type label:first-of-type {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+main > header aside:first-of-type span:last-of-type label:last-of-type {
+  color: var(--medium-gray-color);
+  font-size: 14px;
+}
+
+main > header aside.buttons {
+  border-radius: 30px;
+  min-width: 250px;
+  display: flex;
+  position: relative;
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: asideBtnOneEffect 1s ease forwards;
+  animation-delay: .3s;
+}
+
+@keyframes asideBtnOneEffect {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+.btnFocused {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 50%;
+  border-radius: 30px;
+  background: var(--primary-color);
+  z-index: -1;
+  transition: 0.5s ease;
+  box-shadow: 0 10px 30px -5px var(--primary-color);
+}
+
+.myTeamFocused {
+  transform: translateX(100%);
+}
+
+.AllFocused {
+  transform: translateX(0%);
+}
+
+main > header aside.buttons button {
+  width: 50%;
+  padding: 13px;
+  transition: 0.5s ease;
+}
+
+.button-focused {
+  background: none;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.button-non-focused {
+  background: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: var(--medium-gray-color);
+}
+
+.content {
+  display: grid;
+  justify-content: space-between;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, 310px);
+  row-gap: 60px;
+  column-gap: 40px;
+  margin-top: 80px;
+}
