@@ -12,7 +12,7 @@ for (let index = 2; index < 3; index++) {
   );
 }
 
-for (let index = 3; index < 12; index++) {
+for (let index = 3; index < 17; index++) {
   containerContent.append(
     PersonCard({
       animation: "animaCard 1s ease forwards",
@@ -28,17 +28,15 @@ let buttonMyTeam = document.getElementsByClassName("button-non-focused")[0];
 let btnfocusedSpan = document.getElementsByClassName("btnFocused")[0];
 
 buttonMyTeam.addEventListener("click", () => {
-
-    buttonAll.style.color = "var(--medium-gray-color)";
-    buttonMyTeam.style.color = "#fff";
-    btnfocusedSpan.classList.remove("AllFocused");
-    btnfocusedSpan.classList.add("myTeamFocused");
+  buttonAll.style.color = "var(--medium-gray-color)";
+  buttonMyTeam.style.color = "#fff";
+  btnfocusedSpan.classList.remove("AllFocused");
+  btnfocusedSpan.classList.add("myTeamFocused");
 });
 
 buttonAll.addEventListener("click", () => {
-
-    buttonAll.style.color = "#fff";
-    buttonMyTeam.style.color = "var(--medium-gray-color)";
-    btnfocusedSpan.classList.remove("myTeamFocused");
-    btnfocusedSpan.classList.add("AllFocused");
+  buttonAll.style.color = "#fff";
+  buttonMyTeam.style.color = "var(--medium-gray-color)";
+  btnfocusedSpan.classList.remove("myTeamFocused");
+  btnfocusedSpan.classList.add("AllFocused");
 });
