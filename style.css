@@ -47,7 +47,7 @@ body > header > aside {
   display: flex;
   column-gap: 70px;
   row-gap: 40px;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 body > header > aside span {
@@ -100,7 +100,7 @@ main > header aside:first-of-type {
   width: 70%;
   transform: translateX(100px);
   animation: asideOneEffect 1s ease forwards;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
   opacity: 0;
 }
 
@@ -151,15 +151,15 @@ main > header aside.buttons {
   transform: translateX(-100px);
   opacity: 0;
   animation: asideBtnOneEffect 1s ease forwards;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 @keyframes asideBtnOneEffect {
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
+}
 
 .btnFocused {
   display: flex;
@@ -210,27 +210,16 @@ main > header aside.buttons button {
   margin-top: 80px;
 }
 
-
-
-
-
-
-
-
-
-
-
-@media(max-width:838px){
-
-  body > header{
+@media (max-width: 838px) {
+  body > header {
     padding: 0;
   }
-  
-  body > header > aside{
+
+  body > header > aside {
     padding: 29px;
     justify-content: center;
   }
-  .content{
+  .content {
     justify-content: center;
   }
 }
